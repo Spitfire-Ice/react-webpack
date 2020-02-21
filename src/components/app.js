@@ -5,7 +5,7 @@ import Button from "./button/button";
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="container">
         <h1>This is empty React project(webpack+sass)</h1>
         <Button />
       </div>
