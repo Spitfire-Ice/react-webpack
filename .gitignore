@@ -1,0 +1,22 @@
+/idea
+.idea
+
+# dependencies
+/node_modules
+
+# dist
+/dist
+
+# KDE Dolphin file
+*.directory
+
+# sass
+.sass-cache/
+*.css.map
+*.sassc
+*.map
+
+# Logs
+logs
+*.log
+npm-debug.log*

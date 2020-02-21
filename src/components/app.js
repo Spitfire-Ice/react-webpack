@@ -1,11 +1,13 @@
 import React, { Component } from "react";
-import '../styles/App.css';
+import '../styles/App.scss';
+import Button from "./button/button";
 
 class App extends Component {
   render() {
     return (
       <div>
-        <h1>This is empty React project(webpack)</h1>
+        <h1>This is empty React project(webpack+sass)</h1>
+        <Button />
       </div>
     );
   }
