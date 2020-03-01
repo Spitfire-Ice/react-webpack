@@ -18,6 +18,15 @@ module.exports = {
         use: ["babel-loader"]
       },
       {
+        test: /\.html$/,
+        use: [
+          {
+            loader: 'html-loader',
+            options: { minimize: true },
+          }
+        ]
+      },
+      {
         test: /\.(sa|sc|c)ss$/,
         use: [
           {
@@ -30,6 +39,35 @@ module.exports = {
           'css-loader',
           'postcss-loader',
           'sass-loader',
+        ],
+      },
+      {
+        test: /\.(ttf|eot|otf|woff|woff2|ico)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              outputPath: 'font/',
+              name: '[name].[ext]',
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(png|jpeg|jpg|gif|svg)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              outputPath: 'img/',
+              name: '[name].[ext]',
+              publicPath: './img/',
+              useRelativePaths: true
+            },
+          },
+          {
+            loader: 'image-webpack-loader',
+          },
         ],
       },
     ]
